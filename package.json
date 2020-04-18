@@ -1,0 +1,17 @@
+{
+  "name": "practica-graphql",
+  "version": "1.0.0",
+  "description": "Practica de implementación básica de GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "LuisRF54",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^15.0.0"
+  }
+}
