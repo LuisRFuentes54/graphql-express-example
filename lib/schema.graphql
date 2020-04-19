@@ -1,7 +1,7 @@
 type Person {
     id: Int!
     name: String!
-    lastname: String
+    lastname: String!
 }
 
 type Query {
@@ -9,4 +9,14 @@ type Query {
     getPersons: [Person]
     "Devuelve una persona"
     getPerson(id: ID!): Person
+}
+
+input PersonInput {
+    name: String!
+    lastname: String!
+}
+
+type Mutation {
+    "Crea un curso"
+    createPerson(input: PersonInput!): Person
 }
