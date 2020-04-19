@@ -1,12 +1,12 @@
-type Course {
-    _id: ID
-    tittle: String
-    teacher: String
-    description: String
-    topic: String
+type Person {
+    id: Int!
+    name: String!
+    lastname: String
 }
 
 type Query {
-    "Devuelve todos los cursos"
-    getCourses: [Course]
+    "Devuelve todas las personas"
+    getPersons: [Person]
+    "Devuelve una persona"
+    getPerson(id: ID!): Person
 }

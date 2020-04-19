@@ -1,6 +1,4 @@
-'use strict'
-
-const { graphql, buildSchema } = require('graphql');
+const { makeExecutableSchema } = require('graphql-tools');
 const express = require('express');
 const gqlMiddleware = require("express-graphql");
 const { readFileSync } = require("fs");
@@ -12,12 +10,11 @@ const app = express();
 const port = process.env.port || 4000;
 
 //definiendo el esquema
-const schema = buildSchema(
-    readFileSync(
-        join(__dirname, '/lib', 'schema.graphql'),
-        'utf-8'
-    )
+const typeDefs = readFileSync(
+    join(__dirname, '/lib', 'schema.graphql'),
+    'utf-8'
 );
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 //Configurando el entorno
 app.use('/api', gqlMiddleware({
