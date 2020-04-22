@@ -42,4 +42,8 @@ type Mutation {
     updatePerson(id: ID!,input: PersonInput!): Person
     "Actualiza un curso"
     updateCourse(id: ID!,input: CourseInput!): Course
+    "Elimina una persona"
+    deletePerson(id: ID!): String
+    "Elimina un curso"
+    deleteCourse(id: ID!): String
 }
