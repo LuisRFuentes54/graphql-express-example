@@ -8,6 +8,7 @@ type Person {
 type Course {
     id: Int!
     name: String!
+    students: [Person]
 }
 
 #Definición de los Query
