@@ -39,3 +39,5 @@ Si lo prefieres y para facilitar la ejecución en entorno de desarrollo puedes e
 ```bash
 $ npm run dev
 ```
+
+Para usar la aplicación usa la url http://localhost:4000/api
